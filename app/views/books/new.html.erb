@@ -1,0 +1,5 @@
+<%=form_with model:@book,local:true do |f| %>
+<%=f.text_field:title%>
+<%=f.text.area:body%>
+<%=f.submit 'Create'%>
+<%end%>

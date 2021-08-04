@@ -1,0 +1,13 @@
+<h2>Users</h2>
+<table>
+  <tr>image</tr>
+  <tr>name</tr>
+  <tr></tr>
+</table>
+<% users.each do |user| %>
+  <%=link_to user_path(user.id) do%>
+   <%= attachment_image_tag user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
+  <%end%>
+ <%=user.name%>
+ <%=link_to"show",user_path(user.id) %>
+<%end%>

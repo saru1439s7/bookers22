@@ -1,0 +1,14 @@
+ <h2>User info</h2>
+  <%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+ <table>
+   <tr>
+     <td>name</td>
+     <td><%=user.name%></td>
+   </tr>
+   <tr>
+     <td>introduction</td>
+     <td><%=user.introduction %></td>
+   </tr>
+   <tr><%=link_to "マーク",edit_user_path(current_user)%></tr>
+ </table>
+ 
